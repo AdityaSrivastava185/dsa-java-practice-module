@@ -20,6 +20,6 @@ public class Main{
         int rollnums2[] = {21, 23, 24, 22, 77};
 
         int ros[]; // declaration of array, ros is getting defined in the stack
-        ros = new int[5]; // object is being created in the heap memory - initialisation
+        ros = new int[5]; // object is being created in the heap memory - initialization
     }
 }
