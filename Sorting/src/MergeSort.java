@@ -4,7 +4,10 @@ public class MergeSort {
     static void main(String[] args) {
         int[] nums = {5,4,3,2,1};
         int[] ans = mergeSort(nums);
+        mergeSortInPlace(nums, 0, nums.length);
         System.out.println(Arrays.toString(ans));
+        System.out.println(Arrays.toString(nums));
+
     }
     public static int[] mergeSort(int[] arr){
         if(arr.length == 1){
