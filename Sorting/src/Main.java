@@ -1,20 +1,22 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
     static void main(String[] args) {
-        int[] numbers = {3,1,5,24,2};
-        BubbleSort(numbers);
+        int[] numbers = {3,1,5,4,22};
+        bubbleSort(numbers);
+        System.out.println(Arrays.toString(numbers));
     }
     // bubble sort
-    public static void BubbleSort(int[] arr){
+    public static void bubbleSort(int[] arr){
         boolean swapped;
         if(arr.length == 0){
-            System.out.println("No element found in the given array");
+            System.out.println("The array does not contain element to sort");
         }
         for (int i = 0; i < arr.length; i++) {
             swapped = false;
-            for (int j = 1; j < arr.length-i; j++) {
-                // check if the i is less than j then swap the elements
+            for (int j = 1; j < arr.length - i; j++) {
+                // if the value at index j is less the value at index j-1 , then swap the element
                 if(arr[j] < arr[j-1]){
                     int temp = arr[j];
                     arr[j] = arr[j-1];
@@ -22,10 +24,9 @@ public class Main {
                     swapped = true;
                 }
             }
-            if (!swapped){
+            if(!swapped){
                 break;
             }
         }
-        System.out.println(Arrays.toString(arr));
     }
 }

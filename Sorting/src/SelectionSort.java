@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class SelectionSort {
     static void main(String[] args) {
-        int[] numbers = {3,1,5,24,2};
-        SelectionSort(numbers);
+        int[] numbers = {-7, -6, -5, -3, 0, 2, 4, 5, 1, 3};
+        selectionSortSimple(numbers);
         System.out.println(Arrays.toString(numbers));
     }
     // Selection sort
@@ -28,5 +28,19 @@ static int getMaxIndex(int[] arr, int start, int end) {
         int temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
+    }
+    public static void selectionSortSimple(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            int lastIndex = arr.length - i - 1;
+            int maxIndex = 0;
+            for (int j = 0; j <= lastIndex; j++) {
+                if(arr[maxIndex] < arr[j]){
+                    maxIndex = j;
+                }
+            }
+            int temp = arr[lastIndex];
+            arr[lastIndex] = arr[maxIndex];
+            arr[maxIndex] = temp;
+        }
     }
 }
