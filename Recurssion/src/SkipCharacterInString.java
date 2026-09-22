@@ -1,6 +1,7 @@
 public class SkipCharacterInString {
     static void main(String[] args) {
         skipCharArg("", "baccad");
+        System.out.println(skipChar("baccad"));
     }
     public static void skipCharArg(String processed, String unprocessed){
         if(unprocessed.isEmpty()){
@@ -13,5 +14,16 @@ public class SkipCharacterInString {
         } else{
             skipCharArg(processed + ch, unprocessed.substring(1));
         }
+    }
+    public static String skipChar(String unprocessed){
+       if(unprocessed.isEmpty()){
+           return "";
+       }
+       char ch = unprocessed.charAt(0);
+       if(ch == 'a'){
+           return skipChar(unprocessed.substring(1));
+       } else {
+           return ch + skipChar(unprocessed.substring(1));
+       }
     }
 }
