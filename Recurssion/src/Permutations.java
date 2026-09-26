@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Permutations {
     static void main(String[] args) {
-        
+
 
     }
     static void permutations(String p, String up) {
