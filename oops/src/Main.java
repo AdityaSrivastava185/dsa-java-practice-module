@@ -13,6 +13,7 @@ public class Main{
         student.name = "student1";
         student.rno = 12;
         student.marks = 77.9f;
+        student.greeting();
         System.out.println(student.name);
         System.out.println(student.marks);
         System.out.println(student.rno);
@@ -25,4 +26,13 @@ class Student{
     int rno;
     String name;
     float marks;
+    // Student constructor
+    Student(){
+        this.rno = 12;
+        this.marks = 87.7f;
+        this.name = "student1";
+    }
+    void greeting(){
+        System.out.println("Hello " + this.name);
+    }
 }
