@@ -3,6 +3,10 @@
 public class Main{
     static void main(String[] args) {
         System.out.println("Hello World");
+
+        Singleton obj = Singleton.getInstance();
+
+
         // store roll nos for 5 students
         int[] rollnos = new int[5];
 
