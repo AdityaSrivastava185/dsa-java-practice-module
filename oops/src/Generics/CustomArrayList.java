@@ -52,7 +52,14 @@ public class CustomArrayList {
     static void main(String[] args) {
         CustomArrayList list = new CustomArrayList();
         list.add(3);
+        list.add(5);
+        list.add(8);
+        for (int i = 0; i < 14; i++) {
+            list.add(2*i);
+        }
         System.out.println(list);
+
+
 
     }
 }
