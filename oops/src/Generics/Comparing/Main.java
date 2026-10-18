@@ -7,5 +7,8 @@ public class Main {
 //        if(Kunal < aman){
 //            System.out.println("Aman has more marks");
 //        }
+        if(Kunal.compareTo(aman) < 0){
+            System.out.println("Aman has more marks ");
+        }
     }
 }
