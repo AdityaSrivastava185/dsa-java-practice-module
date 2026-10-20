@@ -19,9 +19,10 @@ public class Main{
         list.insertFirst(14);
         list.insertFirst(24);
         list.insertFirst(64);
-        list.insertLast(99);
+//        list.insertLast(99);
         list.insertAtIndex(100, 3);
-        list.deleteFirst();
+        list.deleteLast();
+//        list.deleteFirst();
         list.display();
         System.out.println("Custom Linked List Size: " + list.getSize());
         //===========================
@@ -35,9 +36,9 @@ public class Main{
         list2.insertFirst(64);
 //        list2.add(33);
 //        list2.add(77);
-        list2.insertAtIndex(100, 3);
-        System.out.println("Practise Linked List Size: " + list2.getSize());
-        list2.display();
+//        list2.insertAtIndex(100, 3);
+//        System.out.println("Practise Linked List Size: " + list2.getSize());
+//        list2.display();
         //===========================
 
 
@@ -53,8 +54,8 @@ public class Main{
         // mark the head and tail
         Node head = first;
         Node tail = third;
-        System.out.println("Head: " + head.value);
-        System.out.println("Tail: " + tail.value);
+//        System.out.println("Head: " + head.value);
+//        System.out.println("Tail: " + tail.value);
 
         // iterate over the list
         Node temp = head;

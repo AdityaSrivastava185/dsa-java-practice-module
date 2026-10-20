@@ -30,6 +30,7 @@ public class LL {
         Node node = new Node(value);
         tail.next = node;
         tail = node;
+        size ++;
     }
 
     public void insertAtIndex(int value, int index){
@@ -56,10 +57,30 @@ public class LL {
         if (head == null){
             tail = null;
         }
+        size--;
     }
 
     public void deleteLast(){
+        if (head == null) {
+            throw new IllegalStateException("List is empty");
+        }
 
+        if (size == 1) {
+            head = null;
+            tail = null;
+            size--;
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != tail) {
+            temp = temp.next;
+        }
+
+        tail = temp;
+        tail.next = null;
+        size--;
     }
 
     public void display(){

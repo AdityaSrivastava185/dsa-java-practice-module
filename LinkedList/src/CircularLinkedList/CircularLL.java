@@ -18,15 +18,20 @@ public class CircularLL {
         if(head == null){
             head = node;
             tail = node;
+            node.next = head;
+        } else{
+            tail.next = node;
+            tail = node;
+            node.next = head;
         }
-
-        node.next = head;
-        tail.next = node;
-        tail = node;
 
     }
     public void display(){
         Node temp = head;
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
        if(head != null){
            do {
                System.out.print(temp.value + " => ");
