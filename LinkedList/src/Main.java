@@ -23,7 +23,23 @@ public class Main{
         list.insertAtIndex(100, 3);
         list.deleteFirst();
         list.display();
+        System.out.println("Custom Linked List Size: " + list.getSize());
         //===========================
+
+
+        // PractiseLL class ==================
+        PractiseLL list2 = new PractiseLL();
+        list2.insertFirst(34);
+        list2.insertFirst(14);
+        list2.insertFirst(24);
+        list2.insertFirst(64);
+//        list2.add(33);
+//        list2.add(77);
+        list2.insertAtIndex(100, 3);
+        System.out.println("Practise Linked List Size: " + list2.getSize());
+        list2.display();
+        //===========================
+
 
         // create the nodes
         Node first = new Node(2);

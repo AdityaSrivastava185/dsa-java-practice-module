@@ -8,6 +8,10 @@ public class LL {
         this.size = 0;
     }
 
+    public int getSize(){
+        return  size;
+    }
+
     public void insertFirst(int value){
         Node node = new Node(value);
         node.next = head;
